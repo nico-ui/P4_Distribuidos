@@ -25,14 +25,20 @@ public class Jugador extends javax.swing.JFrame {
      */
     public Jugador() {
         initComponents();
-        int hora,minutos,segundos; 
+        //int hora,minutos,segundos; 
         jtext.setEditable(false);
         jtext1.setEditable(false);
         jhora.setEditable(false);
+        /**
         Calendar calendario = Calendar.getInstance();
         hora =calendario.get(Calendar.HOUR_OF_DAY);
         minutos = calendario.get(Calendar.MINUTE);
         segundos = calendario.get(Calendar.SECOND);
+        */
+        int hora = (int) (Math.random()*24+0);
+        int minutos = (int) (Math.random()*60+0);
+        int segundos = (int) (Math.random()*60+0);
+        
         
         metodos met = new metodos();
         jhora.setText(met.mostrar(hora)+":"+met.mostrar(minutos)+":"+met.mostrar(segundos));
